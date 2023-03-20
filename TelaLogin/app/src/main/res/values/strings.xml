@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TelaLogin</string>
+    <string name="Titulo">Login</string>
+    <string name="RotuloBotao">OK</string> 
+</resources>
