@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Acesso(View v){
+
         String Login = ((EditText)findViewById(R.id.login)).getText().toString();
         String Senha = ((EditText)findViewById(R.id.senha)).getText().toString();
 
