@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TesteIMC</string>
+    <string name="altura_hint">Altura</string>
+    <string name="peso_hint">Peso</string>
+    <string name="botao_calcular">Calcular IMC</string>
+
+</resources>
