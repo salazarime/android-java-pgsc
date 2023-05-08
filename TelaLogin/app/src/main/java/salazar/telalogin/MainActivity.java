@@ -23,41 +23,42 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         intent = new Intent(this, Logar.class);
         bindService(intent, this, Context.BIND_AUTO_CREATE);
     }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         unbindService(this);
     }
 
     @Override
-    public void onServiceConnected(ComponentName componentName, IBinder iBinder){
+    public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         Logar.MyBinder b = (Logar.MyBinder) iBinder;
         logar = b.getService();
         Toast.makeText(MainActivity.this, "Connected", Toast.LENGTH_SHORT).show();
     }
 
     @Override
-    public void onServiceDisconnected(ComponentName componentName){
+    public void onServiceDisconnected(ComponentName componentName) {
         logar = null;
     }
 
-    public void Acesso(View v){
+    public void Acesso(View v) {
 
-        EditText id1 = ( (EditText) findViewById(R.id.login));
-        EditText id2 = ( (EditText) findViewById(R.id.senha));
+        EditText id1 = ((EditText) findViewById(R.id.login));
+        EditText id2 = ((EditText) findViewById(R.id.senha));
 
         String login = id1.getText().toString();
         String senha = id2.getText().toString();
 
-        String status = logar.validar(login, senha)?"Acesso Autorizado":"Erro";
-        Toast.makeText(this , status, Toast. LENGTH_SHORT).show();
+        String status = logar.validar(login, senha) ? "Acesso Autorizado" : "Erro";
+        Toast.makeText(this, status, Toast.LENGTH_SHORT).show();
 
 
     }

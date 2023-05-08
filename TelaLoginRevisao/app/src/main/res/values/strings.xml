@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tela Login Revisao</string>
+    <string name="titulo">Login</string>
+    <string name="login">login</string>
+    <string name="senha">senha</string>
+    <string name="rotuloBotao">OK</string>
+</resources>

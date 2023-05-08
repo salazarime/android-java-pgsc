@@ -9,16 +9,18 @@ public class Logar extends Service {
     private final IBinder mBinder = new MyBinder();
 
     public class MyBinder extends Binder {
-        Logar getService(){
+        Logar getService() {
+
             return Logar.this;
         }
     }
+
     @Override
-    public IBinder onBind(Intent intent){
+    public IBinder onBind(Intent intent) {
         return mBinder;
     }
 
-    public boolean validar(String login, String senha){
+    public boolean validar(String login, String senha) {
         if(login.equals("Diogo") && senha.equals("12345"))
             return true;
 
